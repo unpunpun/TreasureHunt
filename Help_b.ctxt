@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Help_b
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ help_b\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment2.params=world
+comment2.target=Help_b(Game)
+numComments=3

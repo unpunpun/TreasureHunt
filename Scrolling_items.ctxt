@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Scrolling_items
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ scrolling_items\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=x
+comment1.target=Scrolling_items(int)
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ Act\ -\ do\ whatever\ the\ Scrolling\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment3.params=x
+comment3.target=void\ updateMission(int)
+comment4.params=level
+comment4.target=void\ scrolling(int)
+comment5.params=
+comment5.target=void\ update()
+comment6.params=start\ end
+comment6.target=int\ getRandomNumber(int,\ int)
+numComments=7
