@@ -1,59 +1,29 @@
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class coin here.
+ * Write a description of class Coin here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Coin extends Items
+public class Coin extends Actor
 {
-    public static int coinCounter;
-    static int currentX;
-    static int currentY;
-    Counter counter = new Counter();
-    
-    public Coin(){
-        super.delay = 5;
-        setImage("coinGold.png");
-        changeImage();
-        coinCounter = 0;
-    }
-
+    /**
+     * Act - do whatever the Coin wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act() 
     {
-        timer();
-        changeImage();
-        currentX = getX();
-        currentY = getY();
-        if(atWorldEdge()){
-            getWorld().removeObject(this);
-        }
-        if(mb){
-            move(-4);
-        }
-    }   
-
-    public void changeImage(){
-        setImage("coinGold.png");
-    }
-
-    public void timer () {
-        if(delay >=9*3) { 
-            delay = 1 ; 
-        }else {
-            delay ++ ; 
+        // Add your action code here'
+        eat();
+    }    
+    
+    public void eat(){
+        if(isTouching(Man.class)){
+            World w;
+            w=getWorld();
+            w.removeObject(this);
+            Score.score+=5;
         }
     }
-
-    public int getCoinCounter(){
-        return this.coinCounter;
-    }
-
-    public void setCoinCounter(int cc){
-        coinCounter = cc;
-    }
-
 }
-
-
