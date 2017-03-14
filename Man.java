@@ -12,11 +12,20 @@ public class Man extends Actor
      * Act - do whatever the Man wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int jump = 8;
+    int jump = 10;
+    int count = 0;
+    boolean canJump = true;
     public void act() 
     {
         chk();
-        
+        if(count%8==0){
+          setImage("man.png");  
+        }
+        else{
+          setImage("man1.png");
+        }
+        count++;
+        checkHit();
     }    
 
     public void setLocation(int x,int y){
@@ -29,16 +38,33 @@ public class Man extends Actor
 
     public void chk(){
 
-        if(Greenfoot.isKeyDown("space")){
-            for(int i=1;i<=jump;i++){
-                setLocation(getX(),getY()-5);
+        if(Greenfoot.isKeyDown("space")&& canJump){
+            
+            setLocation(getX(),getY()-120);
+            setImage("man1.png");
+            Greenfoot.playSound("Jumping.mp3");
+           
+            
+            canJump = false;
+        }else{
+            /*
+            for(int i=1;i<=15;i++){
+                setLocation(getX(),getY()+i);
                 setImage("man1.png");
             }
+            //setLocation(142,406);
+            */
+           setLocation(getX(),406);
+            canJump = true;
             
         }
-        else{
-            setLocation(getX(),getY()+10);
-            setImage("man.png");
+        
+    }
+    
+    public void checkHit(){
+        if(isTouching(Bat.class) || isTouching(Daino.class)){
+            Greenfoot.setWorld (new LoseWorld()) ; 
         }
     }
+    
 }

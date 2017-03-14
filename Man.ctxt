@@ -7,4 +7,6 @@ comment2.params=x\ y
 comment2.target=void\ setLocation(int,\ int)
 comment3.params=
 comment3.target=void\ chk()
-numComments=4
+comment4.params=
+comment4.target=void\ checkHit()
+numComments=5

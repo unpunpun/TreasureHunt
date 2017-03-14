@@ -12,7 +12,7 @@ public class Score extends Actor
      * Act - do whatever the Score wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public static int score=0;
+    private static int score=0;
     public Score(){
         setImage(new GreenfootImage("Score : 0",40, Color.WHITE,Color.BLACK));
     }
@@ -21,4 +21,10 @@ public class Score extends Actor
     {
         setImage(new GreenfootImage("Score : "+Score.score,40, Color.WHITE,Color.BLACK));
     }    
+    public int getScore(){
+        return score;
+    }
+    public void setScore(int score){
+        this.score+=score;
+    }
 }

@@ -17,5 +17,18 @@ public class MyWorld extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
+        
+        prepare();
+    }
+    
+    private void prepare()
+    {
+        Button_start start = new Button_start();
+        addObject(start, 453, 287);
+        //start.setLocation(410, 511);
+        
+        Button_help help = new Button_help();
+        addObject(help, 454, 385);
+        //help.setLocation(414, 343);
     }
 }

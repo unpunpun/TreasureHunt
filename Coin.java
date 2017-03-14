@@ -12,18 +12,21 @@ public class Coin extends Actor
      * Act - do whatever the Coin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    static Score score = new Score();
     public void act() 
     {
         // Add your action code here'
-        eat();
+        if(getX() < 5)
+            getWorld().removeObject(this);
+        else eat();
+        move(-5);
     }    
     
     public void eat(){
         if(isTouching(Man.class)){
-            World w;
-            w=getWorld();
-            w.removeObject(this);
-            Score.score+=5;
+            score.setScore(5);
+            Greenfoot.playSound("collectMoney.mp3"); 
+            getWorld().removeObject(this);
         }
     }
 }

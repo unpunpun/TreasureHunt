@@ -16,6 +16,11 @@ public class Bat extends Actor
     public void act() 
     {
         animation();
+        setRotation(180);
+        move(5);
+        setRotation(0);
+        if(getX() < 5)
+            getWorld().removeObject(this);
     }   
     
     public void animation(){
