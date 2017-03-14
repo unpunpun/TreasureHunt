@@ -31,8 +31,8 @@ public class NmWorld extends World
        showText("Time : "+((time)/100),400, 50);
        time--;
        int cnt = getObjects(Bat.class).size();
-       if(cnt < 2) {
-           for(int i = 0; i < 2 - cnt; i++) {
+       if(cnt < 3) {
+           for(int i = 0; i < 3 - cnt; i++) {
                addObject(new Bat(), getWidth()-100+Greenfoot.getRandomNumber(200), Greenfoot.getRandomNumber(getHeight()/2)-50);
                //addObject(new Bat(), getWidth(), Greenfoot.getRandomNumber(getHeight()/2));
             }
@@ -50,7 +50,7 @@ public class NmWorld extends World
         }
       int cnt3 = getObjects(Daino.class).size();
        if(cnt3 < 1) {
-           for(int i = 0; i < 1 - cnt3; i++) {
+           for(int i = 0; time <= 11000 && i < 1 - cnt3; i++) {
                //addObject(new Daino(), getWidth()-100+Greenfoot.getRandomNumber(200), Greenfoot.getRandomNumber(200)+getHeight()/2-100);
                addObject(new Daino(), getWidth()-100+Greenfoot.getRandomNumber(500), 433);
                //addObject(new Bat(), getWidth(), Greenfoot.getRandomNumber(getHeight()/2));

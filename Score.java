@@ -14,6 +14,7 @@ public class Score extends Actor
      */
     private static int score=0;
     public Score(){
+        score = 0;
         setImage(new GreenfootImage("Score : 0",40, Color.WHITE,Color.BLACK));
     }
     
