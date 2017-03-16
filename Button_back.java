@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -24,6 +25,7 @@ public class Button_back extends Button
         
     if (Greenfoot.mouseClicked(this) ){
             Greenfoot.playSound("button.mp3");
+            
             Greenfoot.setWorld (new MyWorld()) ;
         }
     
