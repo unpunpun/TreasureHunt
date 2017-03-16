@@ -14,7 +14,7 @@ public class EzWorld extends World
      * 
      */
     private int time;
-    public static GreenfootSound music = new GreenfootSound("Bg2.wav");
+
     public EzWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,7 +27,6 @@ public class EzWorld extends World
     }
     
    public void act() {
-       music.playLoop();
        showText("Time : "+((time)/100),400, 50);
        int cnt = getObjects(Bat.class).size();
        if(cnt < 4) {
@@ -44,7 +43,6 @@ public class EzWorld extends World
             }
         }
         if(time<=0){
-            music.stop();
             Greenfoot.setWorld(new WinWorld());
         }
         time--;

@@ -13,7 +13,7 @@ public class Button_restart extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     boolean mouseOver =false;
-    
+  
     public void act() 
     {
         active();
@@ -24,7 +24,7 @@ public class Button_restart extends Button
     if (Greenfoot.mouseClicked(this) )
 	{
         Greenfoot.playSound("button.mp3");
-        Greenfoot.setWorld (new LevelWorld()) ;     
+        Greenfoot.setWorld (new LevelWorld()) ;   
     }
     
     if (!mouseOver && Greenfoot.mouseMoved(this))
@@ -38,5 +38,6 @@ public class Button_restart extends Button
        mouseOver = false;
 
     }
+    
     }
 }

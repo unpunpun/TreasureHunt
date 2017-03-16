@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class HelpWorld extends World
 {
-
+   
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,7 +20,7 @@ public class HelpWorld extends World
         
         prepare();
     }
-    
+  
     private void prepare()
     {
         Button_back back = new Button_back();

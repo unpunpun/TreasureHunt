@@ -13,8 +13,9 @@ public class NmWorld extends World
      * Constructor for objects of class NmWorld.
      * 
      */
-    public static GreenfootSound music = new GreenfootSound("Bg2.wav");
+   
     private int time;
+
     public NmWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -27,7 +28,7 @@ public class NmWorld extends World
          time = 12000;
     }
     public void act() {
-       music.playLoop();
+       
        showText("Time : "+((time)/100),400, 50);
        time--;
        int cnt = getObjects(Bat.class).size();
@@ -45,7 +46,6 @@ public class NmWorld extends World
             }
         }
         if(time<=0){
-            music.stop();
             Greenfoot.setWorld(new WinWorld());
         }
       int cnt3 = getObjects(Daino.class).size();
